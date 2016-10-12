@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:h="clr-namespace:NukiAPI.Helpers;assembly=NukiAPI"
+             x:Class="NukiAPI.SettingsPage" Appearing="SettingsPage_OnAppearing">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 40, 20, 20"
+                Android="20, 20, 20, 20"
+                WinPhone="20, 20, 20, 20" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <Grid RowSpacing="25">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <ActivityIndicator x:Name="ActivityIndicatorBusy" IsRunning="False"/>
+
+      <Label Text="{h:Translate BaseUri}" Grid.Row="1"/>
+      <Entry x:Name="EntryBaseUri" Grid.Row="2"/>
+
+      <Label Text="{h:Translate ApiKey}" Grid.Row="3"/>
+      <Entry x:Name="EntryApiKey" Grid.Row="4"/>
+
+      <Button x:Name="ButtonSave" Grid.Row="6" Text="{h:Translate Save}" Clicked="ButtonSave_OnClicked"/>
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>

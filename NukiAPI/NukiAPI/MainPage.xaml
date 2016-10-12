@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:h="clr-namespace:NukiAPI.Helpers;assembly=NukiAPI"
+             x:Class="NukiAPI.MainPage" Appearing="MainPage_OnAppearing">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 40, 20, 20"
+                Android="20, 20, 20, 20"
+                WinPhone="20, 20, 20, 20" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <Grid RowSpacing="25">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <Label x:Name="LabelHeader" Grid.Row="0" Text="{h:Translate Welcome}" FontSize="32" HorizontalOptions="Center" />
+      <ActivityIndicator x:Name="ActivityIndicatorLoading" Grid.Row="1" IsRunning="True"/>
+
+      <Button x:Name="ButtonLock" Grid.Row="2" Text="{h:Translate Lock}" FontSize="32" HorizontalOptions="Fill" Clicked="ButtonLock_OnClicked"/>
+      <Button x:Name="ButtonUnlock" Grid.Row="3" Text="{h:Translate Unlock}" FontSize="32" HorizontalOptions="Fill" Clicked="ButtonUnlock_OnClicked"/>
+
+      <!--<Image Grid.Row="4" Source="{h:ImageResource NukiAPI.Assets.nuki32.png}"/>-->
+      <Button x:Name="ButtonSettings" Grid.Row="5" Text="{h:Translate Settings}" FontSize="24" HorizontalOptions="Fill" Clicked="ButtonSettings_OnClicked"/>
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>
