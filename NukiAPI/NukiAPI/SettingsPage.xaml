@@ -41,7 +41,7 @@
       <Label Text="{h:Translate ConfirmUnlockActions}" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center"/>
       <Switch x:Name="SwitchConfirmUnlock" Grid.Row="6" Grid.Column="1"/>
 
-      <Button x:Name="ButtonSave" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Text="{h:Translate Save}" Clicked="ButtonSave_OnClicked"/>
+      <Button x:Name="ButtonSave" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Text="{h:Translate Save}" BackgroundColor="Accent" Clicked="ButtonSave_OnClicked"/>
     </Grid>
   </ContentPage.Content>
 </ContentPage>

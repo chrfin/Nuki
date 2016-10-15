@@ -35,6 +35,8 @@ namespace NukiAPI
             try
             {
                 ActivityIndicatorBusy.IsRunning = true;
+                IsEnabled = false;
+
                 using (var client = NukiActions.GetClient(EntryBaseUri.Text))
                 {
                     var response = await client.GetAsync($"list?token={EntryApiKey.Text}");
@@ -58,7 +60,9 @@ namespace NukiAPI
             }
             catch (Exception)
             {
+                IsEnabled = true;
                 ActivityIndicatorBusy.IsRunning = false;
+
                 await DisplayAlert(Properties.Resources.NoLocksFoundHeader, Properties.Resources.NoLocksFound, Properties.Resources.OK);
                 return;
             }

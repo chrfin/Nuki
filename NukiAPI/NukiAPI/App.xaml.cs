@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using NukiAPI.Interfaces;
 using Xamarin.Forms;
 
 namespace NukiAPI
 {
-    public class App : Application
+    public partial class App
     {
         public static NukiActions NukiActions { get; private set; }
 
@@ -19,6 +20,8 @@ namespace NukiAPI
                 NukiAPI.Properties.Resources.Culture = ci; // set the RESX for resource localization
                 DependencyService.Get<ILocalize>().SetLocale(ci); // set the Thread for locale-aware methods
             }
+
+            InitializeComponent();
 
             // The root page of your application
             var mainPage = new MainPage();
