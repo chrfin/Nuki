@@ -11,7 +11,13 @@
   </ContentPage.Padding>
   <ContentPage.Content>
     <Grid RowSpacing="25">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
       <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="Auto"/>
@@ -21,15 +27,21 @@
         <RowDefinition Height="Auto"/>
       </Grid.RowDefinitions>
 
-      <ActivityIndicator x:Name="ActivityIndicatorBusy" IsRunning="False"/>
+      <ActivityIndicator x:Name="ActivityIndicatorBusy" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" IsRunning="False"/>
 
-      <Label Text="{h:Translate BaseUri}" Grid.Row="1"/>
-      <Entry x:Name="EntryBaseUri" Grid.Row="2"/>
+      <Label Text="{h:Translate BaseUri}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+      <Entry x:Name="EntryBaseUri" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
 
-      <Label Text="{h:Translate ApiKey}" Grid.Row="3"/>
-      <Entry x:Name="EntryApiKey" Grid.Row="4"/>
+      <Label Text="{h:Translate ApiKey}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+      <Entry x:Name="EntryApiKey" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
 
-      <Button x:Name="ButtonSave" Grid.Row="6" Text="{h:Translate Save}" Clicked="ButtonSave_OnClicked"/>
+      <Label Text="{h:Translate ConfirmLockActions}" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center"/>
+      <Switch x:Name="SwitchConfirmLock" Grid.Row="5" Grid.Column="1"/>
+
+      <Label Text="{h:Translate ConfirmUnlockActions}" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center"/>
+      <Switch x:Name="SwitchConfirmUnlock" Grid.Row="6" Grid.Column="1"/>
+
+      <Button x:Name="ButtonSave" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Text="{h:Translate Save}" Clicked="ButtonSave_OnClicked"/>
     </Grid>
   </ContentPage.Content>
 </ContentPage>

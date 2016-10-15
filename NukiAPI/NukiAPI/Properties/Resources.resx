@@ -180,4 +180,10 @@
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="ConfirmLockActions" xml:space="preserve">
+    <value>Require confirming lock actions</value>
+  </data>
+  <data name="ConfirmUnlockActions" xml:space="preserve">
+    <value>Require confirming unlock actions</value>
+  </data>
 </root>

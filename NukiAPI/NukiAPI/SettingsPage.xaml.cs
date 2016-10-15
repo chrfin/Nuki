@@ -18,6 +18,8 @@ namespace NukiAPI
 
             EntryBaseUri.Text = Settings.BaseUri;
             EntryApiKey.Text = Settings.ApiKey;
+            SwitchConfirmLock.IsToggled = Settings.ConfirmLock;
+            SwitchConfirmUnlock.IsToggled = Settings.ConfirmUnlock;
         }
 
         private async void SettingsPage_OnAppearing(object sender, EventArgs e)
@@ -63,6 +65,8 @@ namespace NukiAPI
 
             Settings.BaseUri = EntryBaseUri.Text;
             Settings.ApiKey = EntryApiKey.Text;
+            Settings.ConfirmLock = SwitchConfirmLock.IsToggled;
+            Settings.ConfirmUnlock = SwitchConfirmUnlock.IsToggled;
 
             await Navigation.PopAsync(true);
         }

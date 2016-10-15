@@ -29,13 +29,13 @@ namespace NukiAPI
 
         private async void ButtonLock_OnClicked(object sender, EventArgs e)
         {
-            if (await DisplayAlert(Properties.Resources.LockHeader, Properties.Resources.LockTheNuki, Properties.Resources.Yes, Properties.Resources.No))
+            if (!Settings.ConfirmLock || await DisplayAlert(Properties.Resources.LockHeader, Properties.Resources.LockTheNuki, Properties.Resources.Yes, Properties.Resources.No))
                 await App.NukiActions.PerformActionAsync(LockAction.Lock);
         }
 
         private async void ButtonUnlock_OnClicked(object sender, EventArgs e)
         {
-            if (await DisplayAlert(NukiAPI.Properties.Resources.UnlockHeader, Properties.Resources.UnlockTheNuki, Properties.Resources.Yes, Properties.Resources.No))
+            if (!Settings.ConfirmUnlock || await DisplayAlert(NukiAPI.Properties.Resources.UnlockHeader, Properties.Resources.UnlockTheNuki, Properties.Resources.Yes, Properties.Resources.No))
                 await App.NukiActions.PerformActionAsync(LockAction.Unlock);
         }
 

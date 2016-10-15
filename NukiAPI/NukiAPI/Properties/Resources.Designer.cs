@@ -89,6 +89,24 @@ namespace NukiAPI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Require confirming lock actions.
+        /// </summary>
+        public static string ConfirmLockActions {
+            get {
+                return ResourceManager.GetString("ConfirmLockActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Require confirming unlock actions.
+        /// </summary>
+        public static string ConfirmUnlockActions {
+            get {
+                return ResourceManager.GetString("ConfirmUnlockActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loading locks....
         /// </summary>
         public static string LoadingLocks {
