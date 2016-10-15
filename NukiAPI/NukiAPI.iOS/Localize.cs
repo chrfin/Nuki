@@ -4,6 +4,8 @@ using System.Globalization;
 using System.Text;
 using System.Threading;
 using Foundation;
+using NukiAPI.Helpers;
+using NukiAPI.Interfaces;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(NukiAPI.iOS.Localize))]
