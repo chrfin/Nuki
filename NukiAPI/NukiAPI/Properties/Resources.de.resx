@@ -186,4 +186,7 @@
   <data name="ConfirmUnlockActions" xml:space="preserve">
     <value>Erfordere Bestätigung beim Aufsperren</value>
   </data>
+  <data name="NukiTitle" xml:space="preserve">
+    <value>Nuki Smartlock</value>
+  </data>
 </root>

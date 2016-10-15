@@ -179,6 +179,15 @@ namespace NukiAPI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nuki Smartlock.
+        /// </summary>
+        public static string NukiTitle {
+            get {
+                return ResourceManager.GetString("NukiTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string OK {
