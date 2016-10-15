@@ -18,6 +18,10 @@ namespace NukiAPI.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+
+            // ReSharper disable once NotAccessedVariable
+            ////var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
+            ////x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
         }
     }
 }

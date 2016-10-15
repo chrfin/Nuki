@@ -154,6 +154,10 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.3.2.127\lib\win81\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Xamarin.Forms.Pages, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Pages.2.3.0.107\lib\win81\Xamarin.Forms.Pages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.2.127\lib\win81\Xamarin.Forms.Platform.dll</HintPath>
       <Private>True</Private>

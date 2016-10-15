@@ -25,6 +25,10 @@ namespace NukiAPI.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            // ReSharper disable once NotAccessedVariable
+            ////var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
+            ////x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
+
             return base.FinishedLaunching(app, options);
         }
     }

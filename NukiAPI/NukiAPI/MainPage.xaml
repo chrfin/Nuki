@@ -24,7 +24,7 @@
       <ActivityIndicator x:Name="ActivityIndicatorLoading" Grid.Row="1" IsRunning="True"/>
 
       <Button Grid.Row="2" Text="{h:Translate Lock}" FontSize="32" BackgroundColor="Green" HorizontalOptions="Fill" Clicked="ButtonLock_OnClicked"/>
-      <Button Grid.Row="3" Text="{h:Translate Unlock}" FontSize="32" BackgroundColor="Accent" HorizontalOptions="Fill" Clicked="ButtonUnlock_OnClicked"/>
+      <Button Grid.Row="3" Text="{h:Translate Unlock}" FontSize="32" BackgroundColor="#FFA500" HorizontalOptions="Fill" Clicked="ButtonUnlock_OnClicked"/>
 
       <!--<Image Grid.Row="4" Source="{h:ImageResource NukiAPI.Assets.nuki32.png}"/>-->
       <Button Grid.Row="5" Text="{h:Translate Settings}" FontSize="24" HorizontalOptions="Fill" Clicked="ButtonSettings_OnClicked">
